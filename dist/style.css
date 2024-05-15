@@ -1,0 +1,541 @@
+body {
+            background-image:url(https://www.moshimoshi-nippon.jp/wp/wp-content/uploads/2020/04/1d50261738140f730962cf8f1d66b3e8.jpg);
+          background-size: cover;
+            margin: 0;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            min-width: 100vw;
+        }
+
+        .face {
+            position: relative;
+            background-color: #009fe3;
+            height: 180px;
+            width: 200px;
+            border-radius: 100%;
+            overflow: hidden;
+            border: 1px solid #000;
+        }
+
+        .face .inner-face {
+            background-color: #fff;
+            height: 180px;
+            width: 150px;
+            border-radius: 100%;
+            position: absolute;
+            top: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 1px solid #000;
+
+        }
+
+        .eye-box {
+            height: 35px;
+            width: 60px;
+            position: relative;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+
+        .left-eye {
+            height: 100%;
+            width: 30px;
+            border-radius: 100%;
+            border: 1px solid #000;
+            background: #fff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .left-eye .inner-eye {
+            background-color: #000;
+            height: 12px;
+            width: 12px;
+            border-radius: 100%;
+            position: absolute;
+            bottom: 5px;
+            right: 6px;
+                      animation: blink 1s;
+            animation-iteration-count: infinite;
+        }
+
+        .left-eye .inner-eye:after {
+            content: '';
+            height: 3px;
+            width: 3px;
+            background-color: #fff;
+            position: absolute;
+            border-radius: 100%;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+/* 
+        .right-eye {
+            height: 100%;
+            width: 30px;
+            border-radius: 100%;
+            border: 1px solid #000;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .right-eye .inner-eye {
+            height: 12px;
+            width: 12px;
+            border-radius: 100%;
+            background-color: transparent;
+            border-top: 3px solid #000;
+            border-left: 3px solid transparent;
+            border-right: 3px solid transparent;
+            position: absolute;
+            bottom: -3px;
+            right: 6px;
+        } */
+.right-eye {
+            height: 100%;
+            width: 30px;
+            border-radius: 100%;
+            border: 1px solid #000;
+            background: #fff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .right-eye .inner-eye {
+            background-color: #000;
+            height: 12px;
+            width: 12px;
+            border-radius: 100%;
+            position: absolute;
+            bottom: 5px;
+            right: 6px;
+            animation: blink 1s;
+            animation-iteration-count: infinite;
+        }
+
+        .right-eye .inner-eye:after {
+            content: '';
+            height: 3px;
+            width: 3px;
+            background-color: #fff;
+            position: absolute;
+            border-radius: 100%;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+
+@keyframes blink {
+   0% { height: 0px }
+}
+
+@keyframes slide {
+  0% {
+        transform: translateX(-50%) rotate(40deg);
+  }
+  50% {
+        transform: translateX(-50%) rotate(-40deg);
+  }
+   100% {
+        transform: translateX(-50%) rotate(40deg);
+  }
+}
+@keyframes smileAni {
+  0% {
+    width: 80px;
+  }
+    50% {
+    width: 160px;
+  }
+    100% {
+    width: 80px;
+  }
+}
+        .nose {
+            background-color: red;
+            height: 16px;
+            width: 16px;
+            border-radius: 100%;
+            border: 1px solid #000;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: calc(100% - 2px);
+        }
+
+        .face-line {
+            height: 60px;
+            width: 1px;
+            background-color: #000;
+            margin: 0 auto;
+        }
+
+        .left-mustarch {
+            height: 50px;
+            width: 40px;
+            position: absolute;
+            top: 38px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .right-mustarch {
+            height: 50px;
+            width: 40px;
+            position: absolute;
+            top: 38px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .left-mustarch .mustrach {
+            height: 1px;
+            width: 100%;
+            background: #000;
+            position: relative;
+        }
+
+        .left-mustarch .mustrach::after {
+            content: '';
+            height: 1px;
+            width: 100%;
+            background: #000;
+            position: absolute;
+            top: -9px;
+            transform: rotate(10deg);
+        }
+
+        .left-mustarch .mustrach::before {
+            content: '';
+            height: 1px;
+            width: 100%;
+            background: #000;
+            position: absolute;
+            top: 9px;
+            transform: rotate(-10deg);
+        }
+
+        .right-mustarch .mustrach {
+            position: relative;
+            height: 1px;
+            width: 100%;
+            background: #000;
+        }
+
+        .right-mustarch .mustrach::after {
+            content: '';
+            height: 1px;
+            width: 100%;
+            background: #000;
+            position: absolute;
+            top: -9px;
+            transform: rotate(-10deg);
+        }
+
+        .right-mustarch .mustrach::before {
+            content: '';
+            height: 1px;
+            width: 100%;
+            background: #000;
+            position: absolute;
+            top: 9px;
+            transform: rotate(10deg);
+        }
+
+        .lips {
+            height: 160px;
+            width: 160px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 100%;
+            border-bottom: 1px solid #000;
+            border-left: 3px solid transparent;
+            border-right: 3px solid transparent;
+            position: absolute;
+            top: -55px;
+             animation: smileAni 2s;
+            animation-iteration-count: infinite;
+        }
+
+        .locket {
+            background-color: red;
+            border: 1px solid #000;
+            border-radius: 100px;
+            padding: 4px;
+            position: relative;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 72%;
+            z-index: 2;
+        }
+
+        .locket .locket-paddel {
+            position: absolute;
+            height: 23px;
+            width: 23px;
+            background: #f7d232;
+            border-radius: 100%;
+            left: 50%;
+            transform: translateX(-50%) rotate(351deg);
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            animation: slide 1.5s;
+            animation-iteration-count: infinite;
+        }
+
+        .locket .locket-paddel:after {
+            content: '';
+            height: 45px;
+            width: 35px;
+            position: absolute;
+            border: 1px solid #000;
+            border-radius: 100%;
+            margin-top: 30px;
+        }
+
+        .locket .locket-paddel:before {
+            content: '';
+            height: 45px;
+            width: 35px;
+            position: absolute;
+            border: 1px solid #000;
+            border-radius: 100%;
+            margin-top: 35px;
+        }
+
+        .locket .locket-paddel .dot {
+            height: 7px;
+            width: 7px;
+            background-color: #000;
+            border-radius: 100%;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .locket .locket-paddel .dot:after {
+            content: '';
+            height: 20px;
+            width: 1px;
+            background-color: #000;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+        }
+
+        .body {
+            height: 90px;
+            width: 150px;
+            background: #009fe3;
+            margin: 0 auto;
+            border: 1px solid #000;
+            border-top: 0;
+            border-radius: 0px 0px 4px 4px;
+            position: relative;
+        }
+
+        .main-body {
+            position: relative;
+            margin-top: -30px;
+        }
+
+        .top-body {
+            background: #009fe3;
+            height: 20px;
+            position: relative;
+            width: 150px;
+            margin: 0 auto;
+            z-index: 0;
+        }
+
+        .pocket-container {
+            height: 120px;
+            width: 120px;
+            background: linear-gradient(0deg, #fff, #fff, #fff, #fff, #fff, #fff, #fff, transparent, transparent);
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 100%;
+            margin-top: -30px;
+        }
+
+        .left-hand {
+            height: 65px;
+            width: 30px;
+            border: 1px solid #000;
+            background: #009fe3;
+            position: absolute;
+            transform: rotate(46deg);
+            top: -17px;
+            border-radius: 62px 16px 40px 53px;
+            left: 7px;
+        }
+
+        .left-hand .hand {
+            height: 34px;
+            width: 34px;
+            border: 1px solid #000;
+            background: #fff;
+            position: absolute;
+            bottom: -18px;
+            border-radius: 100%;
+        }
+
+        .right-hand {
+            height: 65px;
+            width: 30px;
+            border: 1px solid #000;
+            background: #009fe3;
+            position: absolute;
+            transform: rotate(-46deg);
+            top: -17px;
+            border-radius: 31px 64px 59px 12px;
+            right: 7px;
+        }
+
+        .right-hand .hand {
+            height: 34px;
+            width: 34px;
+            border: 1px solid #000;
+            background: #fff;
+            position: absolute;
+            bottom: -18px;
+            border-radius: 100%;
+            left: -4px;
+        }
+
+        .pocket {
+            height: 40px;
+            width: 85px;
+            background: transparent;
+            margin: 68px auto 0 auto;
+            border: 1px solid #000;
+            border-radius: 0 0 100px 100px;
+        }
+
+        .legs {
+            height: 30px;
+            width: calc(100% - 29px);
+            margin: -4px auto 0 auto;
+            background: #fff;
+            border: 1px solid #000;
+                border-radius: 165px 165px 100px 100px;
+            position: relative;
+        }
+
+        .divider {
+            height: 38px;
+            width: 1px;
+            background: #000;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .divider:after {
+            content: '';
+            height: 1px;
+            width: 10px;
+            background: #000;
+            position: absolute;
+            left: -5px;
+        }
+.fan-container .fan-round {
+    height: 14px;
+    width: 26px;
+    background: orange;
+    margin: 0px auto -4px auto;
+    z-index: 1;
+    position: relative;
+    border-radius: 100% 100% 4px 4px;
+}
+.fan-container .fan-stick {
+      height: 20px;
+    width: 4px;
+    background: orange;
+    margin: 0 auto;
+}
+
+.fan-container .fan {
+    height: 10px;
+    width: 10px;
+  border-radius: 100%;
+    background: orange;
+    margin: 0 auto -5px auto;
+  position: relative;
+         transform: rotate3d(13, 0, 0, 60deg)  rotateY(0deg);
+
+              animation: fan 0.5s infinite linear;
+}
+
+.fan-container .fan:after {
+    content: '';
+    background: orange;
+    height: 12px;
+    width: 32px;
+    position: absolute;
+    right: 100%;
+    border-radius: 4px;
+}
+.fan-container .fan:before {
+    content: '';
+    background: orange;
+    height: 12px;
+    width: 32px;
+    position: absolute;
+    left: 100%;
+    border-radius: 4px;
+}
+
+
+@keyframes fan {
+  0% {
+          transform: rotate3d(13, 0, 0, 20deg) rotateY(0deg);
+  }
+/*   50% {
+         transform: rotate3d(13, 0, 0, 60deg)  rotateY(360deg);
+  } */
+   100% {
+         transform: rotate3d(13, 0, 0, 20deg)  rotateY(359deg);
+  }
+}
+
+.doremon-fly {
+      transform: translate(0px, 0px);
+      animation: flying 10s infinite linear;
+  
+}
+@keyframes flying {
+   0% {
+          transform:translate(0px, 0px);
+  }
+   20% {
+          transform: translate(-50px, -50px);
+  }
+   40% {
+          transform: translate(0px, 50px);
+  }
+  60% {
+          transform: translate(50px, 0px);
+  }
+     80% {
+          transform: translate(50px, 50px);
+  }
+   100% {
+          transform: translate(0px, 0px);
+  }
+}
